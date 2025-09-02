@@ -1,120 +1,156 @@
 @import url(https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap&#39;);
 
 :root {
-    --cor-principal: #fbfcfd;
-    --cor-secundaria: #0075fc;
-    --cor-destaque: rgb(50, 126, 240);
-    --gradiente: linear-gradient(135deg, #6E859F, #5654ec);
-    --gradiente-dark: linear-gradient(135deg, #284260, #6E859F);
+--cor-principal: #6E859F; /* Cor principal */
+--cor-secundaria: #284260; /* Cor secundária */
+--cor-destaque: #C92BFC; /* Cor de destaque */
+--gradiente: linear-gradient(135deg, #6E859F, #C92BFC); /* Gradiente */
+--gradiente-dark: linear-gradient(135deg, #284260, #6E859F); /* Gradiente escuro */
 }
 
 body {
-    font-family: 'Chakra Petch', sans-serif;
-    background: #bfcdfc;
-    color: #575555;
-    line-height: 1.6;
+font-family: 'Chakra Petch', sans-serif;
+background: #f5f7fa;
+color: #333;
+line-height: 1.6;
 }
 
 /* Cabeçalho com gradiente */
 header {
-    background: var(--gradiente);
-    color: #050505;
-    border-radius: 0 0 1rem 1rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+background: var(--gradiente);
+color: #fff;
+border-radius: 0 0 1rem 1rem;
+box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 header h1 {
-    color: #050505;
+color: #fff;
 }
 header p.lead {
-    font-size: 1.2rem;
-    color: #e1e1e1;
+font-size: 1.2rem;
+color: #e1e1e1;
 }
 header .badge {
-    background: rgba(151, 151, 151, 0.2) !important;
-    border: 1px solid #868282;
-    color: #050505;
-    box-shadow: 0 0 8px rgba(255,255,255,0.4);
-    transition: transform 0.2s ease;
+background: rgba(255,255,255,0.2) !important;
+border: 1px solid #fff;
+color: #fff;
+box-shadow: 0 0 8px rgba(255,255,255,0.4);
+transition: transform 0.2s ease;
 }
 header .badge:hover {
-    transform: scale(1.1);
+transform: scale(1.1);
 }
 
 /* Títulos */
 h1, h2, h5 {
-    color: var(--cor-secundaria);
-    font-weight: 700;
+color: var(--cor-secundaria);
+font-weight: 700;
 }
 
-/* Cartões modernos */
+/* Cartões modernos (com borda colorida como no cabeçalho) */
 .card {
-    border: none;
-    border-radius: 1rem;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+border: 2px solid var(--cor-secundaria); /* Borda com a cor do cabeçalho */
+border-radius: 1rem;
+overflow: hidden;
+box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+background-color: #fff;
+margin-bottom: 30px; /* Espaço entre os cartões */
+height: 100%;
 }
+
+/* Efeito hover para os cartões */
 .card:hover {
-    transform: translateY(-6px) scale(1.02);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+transform: translateY(-6px) scale(1.02);
+box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
-.card-title {
-    color: var(--cor-secundaria);
-}
+
+/* Estilo da imagem */
 .card img {
-    object-fit: cover;
+object-fit: cover;
+border-radius: 1rem 1rem 0 0; /* Bordas arredondadas na parte superior da imagem */
+width: 100%;
+height: 200px; /* Altura fixa para a imagem */
+}
+
+/* Títulos dentro dos cartões */
+.card-title {
+color: var(--cor-secundaria);
+font-size: 1.1rem;
+font-weight: 600;
 }
 
 /* Botões */
 .btn-link {
-    color: var(--cor-destaque);
-    font-weight: 600;
-    text-decoration: none;
-    transition: color 0.3s ease, transform 0.2s ease;
+color: var(--cor-destaque);
+font-weight: 600;
+text-decoration: none;
+transition: color 0.3s ease, transform 0.2s ease;
 }
 .btn-link:hover {
-    color: #e0e0f0;
-    transform: translateX(4px);
-    text-decoration: underline;
+color: #a11ecf;
+transform: translateX(4px);
+text-decoration: underline;
 }
 
 /* Modal com borda brilhante */
 .modal-content {
-    border-radius: 1rem;
-    border: 2px solid transparent;
-    background-clip: padding-box;
-    background-color: #fff;
-    box-shadow: 0 0 15px rgba(9, 6, 17, 0.4);
+border-radius: 1rem;
+border: 2px solid transparent;
+background-clip: padding-box;
+background-color: #fff;
+box-shadow: 0 0 15px rgba(201,43,252,0.4);
 }
 .modal-header {
-    background: var(--gradiente-dark);
-    color: #fff;
-    border-bottom: none;
+background: var(--gradiente-dark);
+color: #fff;
+border-bottom: none;
 }
 .modal-footer a {
-    color: var(--cor-destaque);
-    font-weight: 600;
-    margin-right: 1rem;
-    transition: color 0.3s ease;
+color: var(--cor-destaque);
+font-weight: 600;
+margin-right: 1rem;
+transition: color 0.3s ease;
 }
 .modal-footer a:hover {
-    color: #eeeeee;
+color: #a11ecf;
 }
 
 /* Rodapé com gradiente escuro */
 footer {
-    background: var(--gradiente-dark);
-    color: #fff;
-    border-radius: 1rem 1rem 0 0;
-    box-shadow: 0 -4px 10px rgba(0,0,0,0.15);
-    text-align: center;
+background: var(--gradiente-dark);
+color: #fff;
+border-radius: 1rem 1rem 0 0;
+box-shadow: 0 -4px 10px rgba(0,0,0,0.15);
+text-align: center;
 }
 footer a {
-    color: #fff;
-    font-weight: 600;
-    text-decoration: none;
-    transition: color 0.3s ease;
+color: #fff;
+font-weight: 600;
+text-decoration: none;
+transition: color 0.3s ease;
 }
 footer a:hover {
-    color: var(--cor-destaque);
+color: var(--cor-destaque);
+}
+
+/* Layout do grid para os projetos */
+.row {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+
+/* Estilo para as colunas (cartões) */
+.col-md-4 {
+flex: 1 1 calc(33.33% - 20px); /* Cada coluna ocupa 33.33% da linha */
+margin-bottom: 20px; /* Adiciona espaçamento entre as linhas */
+display: flex;
+justify-content: center; /* Centraliza os cartões */
+}
+
+/* Responsividade - Em telas menores, os cartões ocupam 100% */
+@media (max-width: 768px) {
+.col-md-4 {
+flex: 1 1 100%;
+}
 }
